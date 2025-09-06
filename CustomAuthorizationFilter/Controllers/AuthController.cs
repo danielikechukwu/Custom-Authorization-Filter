@@ -20,7 +20,7 @@ namespace CustomAuthorizationFilter.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet("public")]
+        [HttpPost("public")]
         [AllowAnonymous]
         public IActionResult Login([FromBody] LoginDTO loginDTO)
         {
