@@ -18,6 +18,7 @@ namespace CustomAuthorizationFilter.Controllers
 
         // Endpoint restricted to users from the "HR" department only
         [HttpGet("salary-review")]
+        // [ApiExplorerSettings(IgnoreApi = true)] // --- To keep out of swagger docs ---
         [TypeFilter(typeof(DepartmentAuthorizationFilter), Arguments = new object[] { "HR" })]
         public IActionResult GetSalaryReview()
         {
