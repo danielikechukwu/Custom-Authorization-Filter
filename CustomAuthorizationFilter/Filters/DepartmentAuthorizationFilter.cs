@@ -24,6 +24,7 @@ namespace CustomAuthorizationFilter.Filters
                     "Unauthorized",
                     "Authentication is required to access this resource."
                 );
+
                 return;
             }
 
@@ -37,6 +38,7 @@ namespace CustomAuthorizationFilter.Filters
                     "Forbidden",
                     $"Access requires membership in one of the following departments: {string.Join(", ", _allowedDepartments)}. Your current department is '{department}'."
                 );
+
                 return;
             }
 
